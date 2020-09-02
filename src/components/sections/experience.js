@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import navigationConstants from 'constants/navigation';
+
 const Experience = (props) => {
   const { data } = props;
 
@@ -8,12 +10,12 @@ const Experience = (props) => {
     const { html, frontmatter } = node;
     const { company, title, range } = frontmatter;
     return (
-      <>
+      <div id={navigationConstants.experience.id}>
         <h2>{company}</h2>
         <h3>{title}</h3>
         <h4>{range}</h4>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-      </>
+      </div>
     );
   };
 
