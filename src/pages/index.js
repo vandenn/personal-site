@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import About from 'components/sections/about';
 import Hero from 'components/sections/hero';
 
 const Home = (props) => {
@@ -8,6 +9,7 @@ const Home = (props) => {
   return (
     <div>
       <Hero data={data.hero.edges} />
+      <About data={data.about.edges} />
     </div>
   );
 };
@@ -25,6 +27,25 @@ export const query = graphql`
             buttonText
             subtitle
             specialties
+          }
+        }
+      }
+    }
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            avatar {
+              childImageSharp {
+                fixed(width: 400, quality: 100) {
+                  ...GatsbyImageSharpFixed_noBase64
+                }
+              }
+            }
           }
         }
       }

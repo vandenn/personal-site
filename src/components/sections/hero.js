@@ -6,7 +6,6 @@ import constants from 'constants/common';
 const Hero = (props) => {
   const { data } = props;
   const { frontmatter } = data[0].node;
-  console.log(frontmatter);
 
   const renderSpecialties = () => {
     return (
