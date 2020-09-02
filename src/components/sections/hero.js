@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import constants from 'constants/common';
+
 const Hero = (props) => {
   const { data } = props;
   const { frontmatter } = data[0].node;
@@ -22,7 +24,9 @@ const Hero = (props) => {
       <h1>{frontmatter.name}</h1>
       <p>{frontmatter.subtitle}</p>
       {renderSpecialties()}
-      <button>{frontmatter.buttonText}</button>
+      <form action={`mailto:${constants.email}`}>
+        <input type='submit' value={frontmatter.buttonText} />
+      </form>
     </div>
   );
 };
