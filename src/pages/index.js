@@ -1,14 +1,33 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
-import Header from 'components/header';
+import Hero from 'components/sections/hero';
 
-const Home = () => {
+const Home = (props) => {
+  const { data } = props;
   return (
     <div>
-      <Header />
-      <p>Hi! I'm Evan.</p>
+      <Hero data={data.hero.edges} />
     </div>
   );
 };
 
 export default Home;
+
+export const query = graphql`
+  {
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            name
+            buttonText
+            subtitle
+            specialties
+          }
+        }
+      }
+    }
+  }
+`;
