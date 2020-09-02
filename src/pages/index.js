@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import About from 'components/sections/about';
 import Contact from 'components/sections/contact';
+import Experience from 'components/sections/experience';
 import Hero from 'components/sections/hero';
 
 const Home = (props) => {
@@ -12,6 +13,7 @@ const Home = (props) => {
     <Layout>
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Experience data={data.experience.edges} />
       <Contact data={data.contact.edges} />
     </Layout>
   );
@@ -49,6 +51,21 @@ export const query = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            company
+            title
+            range
           }
         }
       }
