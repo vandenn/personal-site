@@ -6,6 +6,7 @@ import About from 'components/sections/about';
 import Contact from 'components/sections/contact';
 import Experience from 'components/sections/experience';
 import Hero from 'components/sections/hero';
+import Publications from 'components/sections/publications';
 
 const Home = (props) => {
   const { data } = props;
@@ -14,6 +15,7 @@ const Home = (props) => {
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
       <Experience data={data.experience.edges} />
+      <Publications data={data.publications.edges} />
       <Contact data={data.contact.edges} />
     </Layout>
   );
@@ -66,6 +68,22 @@ export const query = graphql`
             company
             title
             range
+          }
+        }
+      }
+    }
+    publications: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/publications/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            coauthors
+            publisher
+            link
           }
         }
       }

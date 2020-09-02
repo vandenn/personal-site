@@ -7,6 +7,10 @@ module.exports = {
     id: 'experience',
     name: 'Experience',
   },
+  publications: {
+    id: 'publications',
+    name: 'Publications',
+  },
   projects: {
     id: 'projects',
     name: 'Projects',
