@@ -1,7 +1,7 @@
 ---
-header: "Hi, I'm"
+title: "Hi, I'm"
 name: 'Evan Livelo'
-subheader: 'I do'
+subtitle: 'I do'
 specialties:
   - Natural Language Processing
   - Deep Learning
