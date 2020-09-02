@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import Layout from 'components/layout';
 import About from 'components/sections/about';
 import Contact from 'components/sections/contact';
 import Hero from 'components/sections/hero';
@@ -8,11 +9,11 @@ import Hero from 'components/sections/hero';
 const Home = (props) => {
   const { data } = props;
   return (
-    <div>
+    <Layout>
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
       <Contact data={data.contact.edges} />
-    </div>
+    </Layout>
   );
 };
 
