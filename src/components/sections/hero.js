@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Grid, Link, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import SocialButtonGroup from 'components/social/socialButtonGroup';
 import constants from 'constants/common';
 
 const useStyles = makeStyles((theme) => ({
@@ -59,6 +60,9 @@ const Hero = (props) => {
         >
           {frontmatter.buttonText}
         </Button>
+      </Grid>
+      <Grid item>
+        <SocialButtonGroup />
       </Grid>
     </Grid>
   );

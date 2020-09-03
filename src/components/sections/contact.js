@@ -4,6 +4,7 @@ import { Button, Grid, Link, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
+import SocialButtonGroup from 'components/social/socialButtonGroup';
 import constants from 'constants/common';
 import navigationConstants from 'constants/navigation';
 
@@ -36,6 +37,9 @@ const Hero = (props) => {
           >
             {frontmatter.buttonText}
           </Button>
+        </Grid>
+        <Grid item>
+          <SocialButtonGroup />
         </Grid>
       </Grid>
     </SectionLayout>
