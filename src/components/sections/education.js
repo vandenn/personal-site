@@ -1,11 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
 
+const useStyles = makeStyles((theme) => ({
+  content: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 const Education = (props) => {
+  const classes = useStyles();
   const { data } = props;
 
   const renderEducationEntry = (node, index) => {
@@ -26,7 +34,9 @@ const Education = (props) => {
   return (
     <SectionLayout id={navigationConstants.education.id}>
       <Typography variant='h3'>Amazing places where I've studied</Typography>
-      {data.map(({ node }, index) => renderEducationEntry(node, index))}
+      <div className={classes.content}>
+        {data.map(({ node }, index) => renderEducationEntry(node, index))}
+      </div>
     </SectionLayout>
   );
 };
