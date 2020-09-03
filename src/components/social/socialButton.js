@@ -20,7 +20,7 @@ const SocialButton = (props) => {
   };
 
   return (
-    <Link href={url}>
+    <Link href={url} target='_blank' rel='noopener'>
       <IconButton>{renderIcon()}</IconButton>
     </Link>
   );

@@ -35,6 +35,8 @@ const Hero = (props) => {
           <Button
             component={Link}
             href={`mailto:${constants.email}`}
+            target='_blank'
+            rel='noopener'
             variant='outlined'
             className={classes.contactButton}
           >
