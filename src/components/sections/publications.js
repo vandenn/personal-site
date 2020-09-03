@@ -6,11 +6,11 @@ import navigationConstants from 'constants/navigation';
 const Publications = (props) => {
   const { data } = props;
 
-  const renderPublicationEntry = (node) => {
+  const renderPublicationEntry = (node, index) => {
     const { html, frontmatter } = node;
     const { title, coauthors, publisher, link } = frontmatter;
     return (
-      <div id={navigationConstants.publications.id}>
+      <div key={index}>
         <h2>{title}</h2>
         <h3>{publisher}</h3>
         <h4>{`With: ${coauthors}`}</h4>
@@ -21,9 +21,9 @@ const Publications = (props) => {
   };
 
   return (
-    <div>
+    <div id={navigationConstants.publications.id}>
       <h1>Publications I've made with wonderful people</h1>
-      {data.map(({ node }) => renderPublicationEntry(node))}
+      {data.map(({ node }, index) => renderPublicationEntry(node, index))}
     </div>
   );
 };

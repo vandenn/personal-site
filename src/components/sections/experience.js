@@ -6,11 +6,11 @@ import navigationConstants from 'constants/navigation';
 const Experience = (props) => {
   const { data } = props;
 
-  const renderExperienceEntry = (node) => {
+  const renderExperienceEntry = (node, index) => {
     const { html, frontmatter } = node;
     const { company, title, range } = frontmatter;
     return (
-      <div id={navigationConstants.experience.id}>
+      <div key={index}>
         <h2>{company}</h2>
         <h3>{title}</h3>
         <h4>{range}</h4>
@@ -20,9 +20,9 @@ const Experience = (props) => {
   };
 
   return (
-    <div>
+    <div id={navigationConstants.experience.id}>
       <h1>My work experience</h1>
-      {data.map(({ node }) => renderExperienceEntry(node))}
+      {data.map(({ node }, index) => renderExperienceEntry(node, index))}
     </div>
   );
 };

@@ -4,9 +4,12 @@ import navigationConstants from 'constants/navigation';
 
 const Header = (props) => {
   const renderNavigationLinks = () => {
-    return Object.values(navigationConstants).map((navData) => {
+    return Object.values(navigationConstants).map((navData, index) => {
       return (
-        <li style={{ display: 'inline-block', marginRight: '1rem' }}>
+        <li
+          key={index}
+          style={{ display: 'inline-block', marginRight: '1rem' }}
+        >
           <a href={`/#${navData.id}`}>{navData.name}</a>
         </li>
       );

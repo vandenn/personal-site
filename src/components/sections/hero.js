@@ -10,8 +10,8 @@ const Hero = (props) => {
   const renderSpecialties = () => {
     return (
       <ul>
-        {frontmatter.specialties.map((specialty) => {
-          return <li>{specialty}</li>;
+        {frontmatter.specialties.map((specialty, index) => {
+          return <li key={index}>{specialty}</li>;
         })}
       </ul>
     );

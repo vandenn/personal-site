@@ -6,7 +6,7 @@ import navigationConstants from 'constants/navigation';
 const Projects = (props) => {
   const { data } = props;
 
-  const renderProjectEntry = (node) => {
+  const renderProjectEntry = (node, projectIndex) => {
     const { html, frontmatter } = node;
     const { title, tech, link } = frontmatter;
 
@@ -15,8 +15,8 @@ const Projects = (props) => {
         <>
           <h4>Tech</h4>
           <ul>
-            {tech.map((techEntry) => {
-              return <li>{techEntry}</li>;
+            {tech.map((techEntry, techIndex) => {
+              return <li key={techIndex}>{techEntry}</li>;
             })}
           </ul>
         </>
@@ -24,7 +24,7 @@ const Projects = (props) => {
     };
 
     return (
-      <div id={navigationConstants.projects.id}>
+      <div key={projectIndex}>
         <h2>{title}</h2>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         {renderTech()}
@@ -34,9 +34,9 @@ const Projects = (props) => {
   };
 
   return (
-    <div>
+    <div id={navigationConstants.projects.id}>
       <h1>Some projects I've made</h1>
-      {data.map(({ node }) => renderProjectEntry(node))}
+      {data.map(({ node }, index) => renderProjectEntry(node, index))}
     </div>
   );
 };
