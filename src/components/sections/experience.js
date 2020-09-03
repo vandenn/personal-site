@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Typography } from '@material-ui/core';
 
+import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
 
 const Experience = (props) => {
@@ -20,10 +22,10 @@ const Experience = (props) => {
   };
 
   return (
-    <div id={navigationConstants.experience.id}>
-      <h1>My work experience</h1>
+    <SectionLayout id={navigationConstants.experience.id}>
+      <Typography variant='h3'>Cool places I've worked</Typography>
       {data.map(({ node }, index) => renderExperienceEntry(node, index))}
-    </div>
+    </SectionLayout>
   );
 };
 
