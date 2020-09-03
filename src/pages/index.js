@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import About from 'components/sections/about';
 import Contact from 'components/sections/contact';
+import Education from 'components/sections/education';
 import Experience from 'components/sections/experience';
 import Hero from 'components/sections/hero';
 import Projects from 'components/sections/projects';
@@ -15,6 +16,7 @@ const Home = (props) => {
     <Layout>
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Education data={data.education.edges} />
       <Experience data={data.experience.edges} />
       <Publications data={data.publications.edges} />
       <Projects data={data.projects.edges} />
@@ -55,6 +57,21 @@ export const query = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    education: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/education/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            institution
+            degree
+            range
           }
         }
       }
