@@ -1,9 +1,9 @@
 ---
-title: "Hi! I'm Evan. Nice to meet you."
+title: 'Hello there! Nice to meet you!'
 avatar: './dp.jpg'
 ---
 
-I'm a _machine learning researcher_ and a _software developer_ and I specialize in the field of _natural language processing_ and _deep learning_.
+I'm Evan! I'm a _machine learning researcher_, a _software developer_, and I specialize in the field of _natural language processing_ and _deep learning_.
 
 During my days in [De La Salle University](https://www.dlsu.edu.ph/), I took a ladderized BS-MS program in Computer Science (with specialization in Software Technology). This means that I was taking some of my graduate units during my undergraduate years in order to shorten the time needed to complete my master's degree.
 

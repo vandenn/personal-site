@@ -50,8 +50,8 @@ export const query = graphql`
             title
             avatar {
               childImageSharp {
-                fixed(width: 400, quality: 100) {
-                  ...GatsbyImageSharpFixed_noBase64
+                fluid(maxWidth: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }

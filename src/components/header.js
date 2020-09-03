@@ -1,30 +1,40 @@
 import React from 'react';
+import { AppBar, Button, Link, Toolbar, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import navigationConstants from 'constants/navigation';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.background.paper,
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
 const Header = (props) => {
-  const renderNavigationLinks = () => {
+  const classes = useStyles();
+
+  const renderNavigationButtons = () => {
     return Object.values(navigationConstants).map((navData, index) => {
       return (
-        <li
-          key={index}
-          style={{ display: 'inline-block', marginRight: '1rem' }}
-        >
-          <a href={`/#${navData.id}`}>{navData.name}</a>
-        </li>
+        <Button key={index} component={Link} href={`/#${navData.id}`}>
+          {navData.name}
+        </Button>
       );
     });
   };
 
   return (
-    <header style={{ marginBottom: '1.5rem' }}>
-      <a href='/'>
-        <h2 style={{ display: 'inline' }}>Evan Livelo</h2>
-      </a>
-      <ul style={{ listStyle: 'none', float: 'right' }}>
-        {renderNavigationLinks()}
-      </ul>
-    </header>
+    <AppBar position='static' elevation={0} className={classes.root}>
+      <Toolbar>
+        <Typography component={Link} href='/' className={classes.title}>
+          Evan Livelo
+        </Typography>
+        {renderNavigationButtons()}
+      </Toolbar>
+    </AppBar>
   );
 };
 

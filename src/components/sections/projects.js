@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Typography } from '@material-ui/core';
 
+import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
 
 const Projects = (props) => {
@@ -34,10 +36,10 @@ const Projects = (props) => {
   };
 
   return (
-    <div id={navigationConstants.projects.id}>
-      <h1>Some projects I've made</h1>
+    <SectionLayout id={navigationConstants.projects.id}>
+      <Typography variant='h3'>Some interesting projects I've made</Typography>
       {data.map(({ node }, index) => renderProjectEntry(node, index))}
-    </div>
+    </SectionLayout>
   );
 };
 
