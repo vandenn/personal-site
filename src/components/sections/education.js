@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 
 import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
@@ -10,10 +10,12 @@ const Education = (props) => {
 
   const renderEducationEntry = (node, index) => {
     const { html, frontmatter } = node;
-    const { institution, degree, range } = frontmatter;
+    const { institution, degree, range, link } = frontmatter;
     return (
       <div key={index}>
-        <h2>{institution}</h2>
+        <Link href={link}>
+          <Typography variant='h5'>{institution}</Typography>
+        </Link>
         <h3>{degree}</h3>
         <h4>{range}</h4>
         <div dangerouslySetInnerHTML={{ __html: html }} />

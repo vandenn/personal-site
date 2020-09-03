@@ -3,6 +3,7 @@ date: '2016-08'
 institution: 'De La Salle University - Manila'
 degree: 'Bachelor of Science in Computer Science with Specialization in Software Technology'
 range: '2012 - 2016'
+link: 'https://www.dlsu.edu.ph'
 ---
 
 - Magna Cum Laude
