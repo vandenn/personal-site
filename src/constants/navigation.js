@@ -3,13 +3,13 @@ module.exports = {
     id: 'about',
     name: 'About Me',
   },
-  education: {
-    id: 'education',
-    name: 'Education',
-  },
   experience: {
     id: 'experience',
     name: 'Experience',
+  },
+  education: {
+    id: 'education',
+    name: 'Education',
   },
   publications: {
     id: 'publications',

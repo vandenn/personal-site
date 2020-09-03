@@ -16,8 +16,8 @@ const Home = (props) => {
     <Layout>
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
-      <Education data={data.education.edges} />
       <Experience data={data.experience.edges} />
+      <Education data={data.education.edges} />
       <Publications data={data.publications.edges} />
       <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
@@ -61,6 +61,21 @@ export const query = graphql`
         }
       }
     }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            company
+            title
+            range
+          }
+        }
+      }
+    }
     education: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/education/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -73,21 +88,6 @@ export const query = graphql`
             degree
             range
             link
-          }
-        }
-      }
-    }
-    experience: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/experience/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            company
-            title
-            range
           }
         }
       }
