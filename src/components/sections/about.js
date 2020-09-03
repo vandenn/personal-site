@@ -34,12 +34,12 @@ const About = (props) => {
         spacing={2}
         className={classes.content}
       >
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={12} md={4}>
           <div className={classes.imageContainer}>
             <Img fluid={frontmatter.avatar.childImageSharp.fluid} alt='Evan' />
           </div>
         </Grid>
-        <Grid item xs={12} sm={7}>
+        <Grid item xs={12} sm={12} md={8}>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
         </Grid>
       </Grid>
