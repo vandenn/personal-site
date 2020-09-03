@@ -40,9 +40,7 @@ const About = (props) => {
           </div>
         </Grid>
         <Grid item xs={12} sm={7}>
-          <Typography>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </Typography>
+          <Typography dangerouslySetInnerHTML={{ __html: html }} />
         </Grid>
       </Grid>
     </SectionLayout>

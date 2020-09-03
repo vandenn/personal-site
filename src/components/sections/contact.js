@@ -25,9 +25,7 @@ const Hero = (props) => {
           <Typography variant='h3'>{frontmatter.title}</Typography>
         </Grid>
         <Grid item>
-          <Typography>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </Typography>
+          <Typography dangerouslySetInnerHTML={{ __html: html }} />
         </Grid>
         <Grid item>
           <Button
