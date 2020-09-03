@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
   contactButton: {
     marginTop: theme.spacing(2),
   },
+  socialButtonsContainer: {
+    marginTop: theme.spacing(4),
+  },
 }));
 
 const Hero = (props) => {
@@ -61,7 +64,7 @@ const Hero = (props) => {
           {frontmatter.buttonText}
         </Button>
       </Grid>
-      <Grid item>
+      <Grid item className={classes.socialButtonsContainer}>
         <SocialButtonGroup />
       </Grid>
     </Grid>
