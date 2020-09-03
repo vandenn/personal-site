@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,11 +26,7 @@ const About = (props) => {
   const { html, frontmatter } = data[0].node;
 
   return (
-    <Paper
-      id={navigationConstants.about.id}
-      elevation={0}
-      className={classes.root}
-    >
+    <SectionLayout id={navigationConstants.about.id}>
       <Typography variant='h3'>{frontmatter.title}</Typography>
       <Grid
         container
@@ -48,7 +45,7 @@ const About = (props) => {
           </Typography>
         </Grid>
       </Grid>
-    </Paper>
+    </SectionLayout>
   );
 };
 
