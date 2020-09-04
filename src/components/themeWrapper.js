@@ -1,6 +1,8 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
+import colorConstants from 'constants/colors';
+
 const FONT_MONTSERRAT = 'Montserrat, sans-serif';
 const FONT_ROBOTO_MONO = 'Roboto Mono, Consolas, serif';
 const FONT_SOURCE_SANS_PRO = 'Source Sans Pro, sans-serif';
@@ -8,19 +10,18 @@ const FONT_SOURCE_SANS_PRO = 'Source Sans Pro, sans-serif';
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: '#f5f5f5',
-      paper: '#f4f4f4',
-      paperSecondary: '#e5e5e5',
+      default: colorConstants.backgroundDefault,
+      paper: colorConstants.backgroundPaper,
+      paperSecondary: colorConstants.backgroundPaperSecondary,
     },
     primary: {
-      main: '#145374',
-      darK: '#00334e',
+      main: colorConstants.primary,
     },
     secondary: {
-      main: '#ee6f57',
+      main: colorConstants.secondary,
     },
     text: {
-      primary: '#323232',
+      primary: colorConstants.text,
     },
   },
   typography: {
