@@ -64,7 +64,20 @@ const Education = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.education.id}>
-      <Typography variant='h3'>Highlights of my education</Typography>
+      <Typography
+        variant='h3'
+        color='primary'
+        style={{ display: 'inline-block' }}
+      >
+        Highlights of my{' '}
+        <Typography
+          variant='h3'
+          color='secondary'
+          style={{ display: 'inline-block' }}
+        >
+          education
+        </Typography>
+      </Typography>
       <Grid container spacing={2} className={classes.content}>
         {data.map(({ node }, index) => renderEducationEntry(node, index))}
       </Grid>

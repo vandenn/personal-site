@@ -77,7 +77,21 @@ const Projects = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.projects.id}>
-      <Typography variant='h3'>Some interesting projects I've done</Typography>
+      <Typography
+        variant='h3'
+        color='primary'
+        style={{ display: 'inline-block' }}
+      >
+        Some interesting{' '}
+        <Typography
+          variant='h3'
+          color='secondary'
+          style={{ display: 'inline-block' }}
+        >
+          projects
+        </Typography>{' '}
+        I've done
+      </Typography>
       <Grid container spacing={2} className={classes.content}>
         {data.map(({ node }, index) => renderProjectEntry(node, index))}
       </Grid>

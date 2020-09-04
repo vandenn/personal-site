@@ -32,7 +32,9 @@ const About = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.about.id}>
-      <Typography variant='h3'>{frontmatter.title}</Typography>
+      <Typography variant='h3' color='primary'>
+        {frontmatter.title}
+      </Typography>
       <Grid
         container
         alignItems='center'

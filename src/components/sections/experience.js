@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Box, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
@@ -38,7 +38,20 @@ const Experience = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.experience.id}>
-      <Typography variant='h3'>Cool places I've worked</Typography>
+      <Typography
+        variant='h3'
+        color='primary'
+        style={{ display: 'inline-block' }}
+      >
+        Cool places I've{' '}
+        <Typography
+          variant='h3'
+          color='secondary'
+          style={{ display: 'inline-block' }}
+        >
+          worked
+        </Typography>
+      </Typography>
       <Grid
         container
         direction='column'

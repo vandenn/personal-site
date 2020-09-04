@@ -66,8 +66,19 @@ const Publications = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.publications.id}>
-      <Typography variant='h3'>
-        Publications I've made with wonderful people
+      <Typography
+        variant='h3'
+        color='primary'
+        style={{ display: 'inline-block' }}
+      >
+        <Typography
+          variant='h3'
+          color='secondary'
+          style={{ display: 'inline-block' }}
+        >
+          Publications
+        </Typography>{' '}
+        I've made with wonderful people
       </Typography>
       <Grid container spacing={2} className={classes.content}>
         {data.map(({ node }, index) => renderPublicationEntry(node, index))}
