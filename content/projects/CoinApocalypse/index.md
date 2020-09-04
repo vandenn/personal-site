@@ -5,6 +5,7 @@ tech:
   - Flash/ActionScript3
   - Flixel
 link: 'https://vandenn-games.itch.io/coin-apocalypse'
+image: './coinapocalypse.png'
 ---
 
 A fun passion project that I did during my early college years. The game was developed mainly using an AS3 library called Flixel in the FlashDevelop IDE. All the pixel art was also made by me using GIMP and Paint.

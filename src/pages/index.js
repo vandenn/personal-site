@@ -126,6 +126,13 @@ export const query = graphql`
             title
             tech
             link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
         }
       }

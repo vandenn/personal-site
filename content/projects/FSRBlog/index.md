@@ -7,6 +7,7 @@ tech:
   - Express
   - PostgreSQL
 link: 'https://github.com/Vandenn/fullstack-react-blog'
+image: './react.png'
 ---
 
 A fullstack single page application (SPA) web blog implemented in React+Redux (focusing on hooks) with Express and PostgreSQL. This is a sporadically growing project that serves as a sandbox for implementing various libraries and services.

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import { Grid, Link, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -9,6 +10,14 @@ import navigationConstants from 'constants/navigation';
 const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: theme.spacing(2),
+  },
+  imageContainer: {
+    flexGrow: 1,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    paddingBottom: theme.spacing(1),
   },
   projectEntry: {
     padding: theme.spacing(2),
@@ -21,7 +30,7 @@ const Projects = (props) => {
 
   const renderProjectEntry = (node, projectIndex) => {
     const { html, frontmatter } = node;
-    const { title, tech, link } = frontmatter;
+    const { title, tech, link, image } = frontmatter;
     const allocatedSize = Math.max(4, 12 / data.length);
 
     const renderTech = () => {
@@ -44,6 +53,12 @@ const Projects = (props) => {
           variant='outlined'
           className={classes.projectEntry}
         >
+          <Img
+            fluid={image.childImageSharp.fluid}
+            alt={title}
+            imgStyle={{ objectFit: 'contain' }}
+            className={classes.image}
+          />
           <Typography
             component={Link}
             href={link}
@@ -54,7 +69,6 @@ const Projects = (props) => {
             {title}
           </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
-          {renderTech()}
           <Link href={link} target='_blank' rel='noopener'>
             View
           </Link>
