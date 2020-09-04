@@ -8,9 +8,9 @@ const FONT_SOURCE_SANS_PRO = 'Source Sans Pro, sans-serif';
 const theme = createMuiTheme({
   palette: {
     background: {
-      default: '#b8b8d9',
-      paper: '#ffffff',
-      paperSecondary: '#fdebdc',
+      default: '#ffffff',
+      paper: '#f9f9f9',
+      paperSecondary: '#f3f3f3',
     },
   },
   typography: {
