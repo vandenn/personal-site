@@ -44,7 +44,15 @@ const Projects = (props) => {
           variant='outlined'
           className={classes.projectEntry}
         >
-          <Typography variant='h6'>{title}</Typography>
+          <Typography
+            component={Link}
+            href={link}
+            target='_blank'
+            rel='noopener'
+            variant='h6'
+          >
+            {title}
+          </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
           {renderTech()}
           <Link href={link} target='_blank' rel='noopener'>

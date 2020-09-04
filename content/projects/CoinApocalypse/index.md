@@ -1,5 +1,5 @@
 ---
-date: '2014-01'
+date: '2014-02'
 title: 'Coin Apocalypse'
 tech:
   - Flash/ActionScript3

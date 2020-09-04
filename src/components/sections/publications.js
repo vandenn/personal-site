@@ -26,7 +26,15 @@ const Publications = (props) => {
     return (
       <Grid item key={index} xs={12} sm={allocatedSize}>
         <Paper variant='outlined' square className={classes.publicationEntry}>
-          <Typography variant='h6'>{title}</Typography>
+          <Typography
+            component={Link}
+            href={link}
+            target='_blank'
+            rel='noopener'
+            variant='h6'
+          >
+            {title}
+          </Typography>
           <Typography variant='subtitle1' color='textSecondary'>
             {publisher}
           </Typography>
