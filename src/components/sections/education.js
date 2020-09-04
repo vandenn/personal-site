@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import { Grid, Link, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -9,6 +10,11 @@ import navigationConstants from 'constants/navigation';
 const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: theme.spacing(2),
+  },
+  imageContainer: {
+    height: '50px',
+    width: '50px',
+    marginBottom: theme.spacing(1),
   },
   educationEntry: {
     padding: theme.spacing(2),
@@ -21,26 +27,33 @@ const Education = (props) => {
 
   const renderEducationEntry = (node, index) => {
     const { html, frontmatter } = node;
-    const { institution, degree, range, link } = frontmatter;
+    const { institution, degree, range, link, image } = frontmatter;
     const allocatedSize = Math.max(4, 12 / data.length);
     return (
       <Grid item key={index} xs={12} sm={allocatedSize}>
         <Paper elevation={0} variant='outlined'>
           <Grid container direction='column' className={classes.educationEntry}>
-            <Grid item>
+            <Grid item xs={12}>
+              <Link href={link} target='_blank' rel='noopener'>
+                <div className={classes.imageContainer}>
+                  <Img fluid={image.childImageSharp.fluid} alt={institution} />
+                </div>
+              </Link>
+            </Grid>
+            <Grid item xs={12}>
               <Typography variant='h6'>{degree}</Typography>
             </Grid>
-            <Grid item>
-              <Grid item>
-                <Link href={link}>
-                  <Typography variant='subtitle1'>{institution}</Typography>
-                </Link>
-              </Grid>
+            <Grid item xs={12}>
+              <Link href={link}>
+                <Typography variant='subtitle1'>{institution}</Typography>
+              </Link>
+            </Grid>
+            <Grid item xs={12}>
               <Typography variant='subtitle2' color='textSecondary'>
                 {range}
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12}>
               <Typography dangerouslySetInnerHTML={{ __html: html }} />
             </Grid>
           </Grid>

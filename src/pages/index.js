@@ -88,6 +88,13 @@ export const query = graphql`
             degree
             range
             link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
           }
         }
       }

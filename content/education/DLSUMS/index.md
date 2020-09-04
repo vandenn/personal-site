@@ -4,6 +4,7 @@ institution: 'De La Salle University - Manila'
 degree: 'Master of Science in Computer Science'
 range: '2016 - 2017'
 link: 'https://www.dlsu.edu.ph'
+image: './dlsu.png'
 ---
 
 - Ladderized BS-MS in Computer Science program - I took several of my graduate units during my undergraduate years in order to shorten the time needed to complete my master's degree.
