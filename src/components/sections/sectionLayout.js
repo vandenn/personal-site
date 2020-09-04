@@ -16,7 +16,7 @@ const SectionLayout = (props) => {
   const { children, id } = props;
 
   return (
-    <Paper elevation={0} className={classes.root}>
+    <Paper elevation={2} className={classes.root}>
       <span id={id}>{children}</span>
     </Paper>
   );

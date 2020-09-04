@@ -14,8 +14,11 @@ const useStyles = makeStyles((theme) => ({
   name: {
     fontSize: '6rem',
   },
+  specialties: {
+    marginTop: theme.spacing(1),
+  },
   contactButton: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(4),
   },
   socialButtonsContainer: {
     marginTop: theme.spacing(4),
@@ -38,7 +41,11 @@ const Hero = (props) => {
       },
       ''
     );
-    return <Typography variant='h6'>{specialtiesString}</Typography>;
+    return (
+      <Typography variant='h6' className={classes.specialties}>
+        {specialtiesString}
+      </Typography>
+    );
   };
 
   return (
@@ -49,15 +56,19 @@ const Hero = (props) => {
       className={classes.root}
     >
       <Grid item>
-        <Typography variant='h4'>{frontmatter.title}</Typography>
+        <Typography variant='h4' color='secondary'>
+          {frontmatter.title}
+        </Typography>
       </Grid>
       <Grid item>
-        <Typography variant='h2' className={classes.name}>
+        <Typography variant='h2' color='primary' className={classes.name}>
           {frontmatter.name}
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant='h4'>{frontmatter.subtitle}</Typography>
+        <Typography variant='h4' color='secondary'>
+          {frontmatter.subtitle}
+        </Typography>
       </Grid>
       <Grid item>{renderSpecialties()}</Grid>
       <Grid item>
@@ -66,7 +77,8 @@ const Hero = (props) => {
           href={`mailto:${constants.email}`}
           target='_blank'
           rel='noopener'
-          variant='outlined'
+          variant='contained'
+          color='primary'
           size='large'
           className={classes.contactButton}
         >

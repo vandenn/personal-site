@@ -37,7 +37,8 @@ const Hero = (props) => {
             href={`mailto:${constants.email}`}
             target='_blank'
             rel='noopener'
-            variant='outlined'
+            variant='contained'
+            color='primary'
             size='large'
             className={classes.contactButton}
           >
