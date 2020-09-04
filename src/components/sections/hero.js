@@ -9,6 +9,7 @@ import constants from 'constants/common';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '50px',
+    textAlign: 'center',
   },
   name: {
     fontSize: '6rem',
@@ -37,7 +38,7 @@ const Hero = (props) => {
       },
       ''
     );
-    return <Typography variant='body1'>{specialtiesString}</Typography>;
+    return <Typography variant='h6'>{specialtiesString}</Typography>;
   };
 
   return (
@@ -56,7 +57,7 @@ const Hero = (props) => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant='h6'>{frontmatter.subtitle}</Typography>
+        <Typography variant='h4'>{frontmatter.subtitle}</Typography>
       </Grid>
       <Grid item>{renderSpecialties()}</Grid>
       <Grid item>
@@ -66,6 +67,7 @@ const Hero = (props) => {
           target='_blank'
           rel='noopener'
           variant='outlined'
+          size='large'
           className={classes.contactButton}
         >
           {frontmatter.buttonText}

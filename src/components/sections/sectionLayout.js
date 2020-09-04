@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: '50px',
     padding: '50px',
+    backgroundColor: theme.palette.background.paperSecondary,
   },
 }));
 
