@@ -6,7 +6,7 @@ import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
   },
   title: {
     flexGrow: 1,
