@@ -70,6 +70,7 @@ const Projects = (props) => {
             {title}
           </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
+          {renderTech()}
           <Link href={link} target='_blank' rel='noopener'>
             View
           </Link>
