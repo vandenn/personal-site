@@ -1,5 +1,6 @@
 const path = require('path');
 const constants = require('./src/constants/common');
+const colorConstants = require('./src/constants/colors');
 
 module.exports = {
   siteMetadata: {
@@ -11,6 +12,20 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'EvanLivelo',
+        short_name: 'EvanLivelo',
+        start_url: '/',
+        background_color: colorConstants.backgroundDefault,
+        theme_color: colorConstants.primary,
+        display: 'minimal-ui',
+        icon: 'src/images/favicon.png',
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -25,6 +40,7 @@ module.exports = {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components'),
         constants: path.join(__dirname, 'src/constants'),
+        images: path.join(__dirname, 'src/images'),
       },
     },
     {
