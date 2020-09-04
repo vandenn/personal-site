@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Link, Paper, Typography } from '@material-ui/core';
+import { DescriptionOutlined as DescriptionOutlinedIcon } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
@@ -26,23 +27,38 @@ const Publications = (props) => {
     return (
       <Grid item key={index} xs={12} sm={allocatedSize}>
         <Paper variant='outlined' square className={classes.publicationEntry}>
-          <Typography
-            component={Link}
-            href={link}
-            target='_blank'
-            rel='noopener'
-            variant='h6'
-          >
-            {title}
-          </Typography>
-          <Typography variant='subtitle1' color='textSecondary'>
-            {publisher}
-          </Typography>
-          <Typography variant='subtitle1'>{`With: ${coauthors}`}</Typography>
-          <Typography dangerouslySetInnerHTML={{ __html: html }} />
-          <Link href={link} target='_blank' rel='noopener'>
-            View
-          </Link>
+          <Grid container direction='column'>
+            <Grid item>
+              <DescriptionOutlinedIcon fontSize='large' />
+            </Grid>
+            <Grid item>
+              <Typography
+                component={Link}
+                href={link}
+                target='_blank'
+                rel='noopener'
+                variant='h6'
+              >
+                {title}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='subtitle1' color='textSecondary'>
+                {publisher}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant='subtitle1'>{`With: ${coauthors}`}</Typography>
+            </Grid>
+            <Grid item>
+              <Typography dangerouslySetInnerHTML={{ __html: html }} />
+            </Grid>
+            <Grid item>
+              <Link href={link} target='_blank' rel='noopener'>
+                View
+              </Link>
+            </Grid>
+          </Grid>
         </Paper>
       </Grid>
     );
