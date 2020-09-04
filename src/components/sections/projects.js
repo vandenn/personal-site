@@ -12,12 +12,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
   imageContainer: {
-    flexGrow: 1,
+    marginBottom: theme.spacing(2),
   },
   image: {
     width: '100%',
     height: '100%',
-    paddingBottom: theme.spacing(1),
   },
   projectEntry: {
     padding: theme.spacing(2),
@@ -53,12 +52,14 @@ const Projects = (props) => {
           variant='outlined'
           className={classes.projectEntry}
         >
-          <Img
-            fluid={image.childImageSharp.fluid}
-            alt={title}
-            imgStyle={{ objectFit: 'contain' }}
-            className={classes.image}
-          />
+          <div className={classes.imageContainer}>
+            <Img
+              fluid={image.childImageSharp.fluid}
+              alt={title}
+              imgStyle={{ objectFit: 'contain' }}
+              className={classes.image}
+            />
+          </div>
           <Typography
             component={Link}
             href={link}
