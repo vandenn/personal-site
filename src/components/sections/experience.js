@@ -24,11 +24,7 @@ const Experience = (props) => {
     const { company, title, range } = frontmatter;
     return (
       <Grid item key={index}>
-        <Paper
-          elevation={0}
-          variant='outlined'
-          className={classes.experienceEntry}
-        >
+        <Paper elevation={5} className={classes.experienceEntry}>
           <Typography variant='h6'>{company}</Typography>
           <Typography variant='subtitle1'>{title}</Typography>
           <Typography variant='subtitle2' color='textSecondary'>

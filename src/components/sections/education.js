@@ -31,7 +31,7 @@ const Education = (props) => {
     const allocatedSize = Math.max(4, 12 / data.length);
     return (
       <Grid item key={index} xs={12} sm={allocatedSize}>
-        <Paper elevation={0} variant='outlined'>
+        <Paper elevation={5}>
           <Grid container direction='column' className={classes.educationEntry}>
             <Grid item xs={12}>
               <Link href={link} target='_blank' rel='noopener'>

@@ -26,7 +26,7 @@ const Publications = (props) => {
     const allocatedSize = Math.max(4, 12 / data.length);
     return (
       <Grid item key={index} xs={12} sm={allocatedSize}>
-        <Paper variant='outlined' className={classes.publicationEntry}>
+        <Paper elevation={5} className={classes.publicationEntry}>
           <Grid container direction='column'>
             <Grid item>
               <DescriptionOutlinedIcon fontSize='large' />

@@ -47,11 +47,7 @@ const Projects = (props) => {
 
     return (
       <Grid item key={projectIndex} xs={12} sm={allocatedSize}>
-        <Paper
-          elevation={0}
-          variant='outlined'
-          className={classes.projectEntry}
-        >
+        <Paper elevation={5} className={classes.projectEntry}>
           <div className={classes.imageContainer}>
             <Img
               fluid={image.childImageSharp.fluid}
