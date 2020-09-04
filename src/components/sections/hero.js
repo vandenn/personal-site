@@ -8,7 +8,10 @@ import constants from 'constants/common';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '100px',
+    padding: '50px',
+  },
+  name: {
+    fontSize: '6rem',
   },
   contactButton: {
     marginTop: theme.spacing(2),
@@ -48,7 +51,9 @@ const Hero = (props) => {
         <Typography variant='h4'>{frontmatter.title}</Typography>
       </Grid>
       <Grid item>
-        <Typography variant='h2'>{frontmatter.name}</Typography>
+        <Typography variant='h2' className={classes.name}>
+          {frontmatter.name}
+        </Typography>
       </Grid>
       <Grid item>
         <Typography variant='h6'>{frontmatter.subtitle}</Typography>
