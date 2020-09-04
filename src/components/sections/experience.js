@@ -1,30 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
 import navigationConstants from 'constants/navigation';
 
+const useStyles = makeStyles((theme) => ({
+  content: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 const Experience = (props) => {
+  const classes = useStyles();
   const { data } = props;
 
   const renderExperienceEntry = (node, index) => {
     const { html, frontmatter } = node;
     const { company, title, range } = frontmatter;
     return (
-      <div key={index}>
-        <h2>{company}</h2>
-        <h3>{title}</h3>
-        <h4>{range}</h4>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+      <Grid item key={index}>
+        <Typography variant='h6'>{company}</Typography>
+        <Typography variant='subtitle1'>{title}</Typography>
+        <Typography variant='subtitle2' color='textSecondary'>
+          {range}
+        </Typography>
+        <Typography dangerouslySetInnerHTML={{ __html: html }} />
+      </Grid>
     );
   };
 
   return (
     <SectionLayout id={navigationConstants.experience.id}>
       <Typography variant='h3'>Cool places I've worked</Typography>
-      {data.map(({ node }, index) => renderExperienceEntry(node, index))}
+      <Grid container direction='column' className={classes.content}>
+        {data.map(({ node }, index) => renderExperienceEntry(node, index))}
+      </Grid>
     </SectionLayout>
   );
 };
