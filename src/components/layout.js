@@ -5,6 +5,7 @@ import { CssBaseline } from '@material-ui/core';
 import Footer from 'components/Footer';
 import Head from 'components/head';
 import Header from 'components/header';
+import ThemeWrapper from 'components/themeWrapper';
 
 const Layout = (props) => {
   const { children } = props;
@@ -23,11 +24,13 @@ const Layout = (props) => {
       `}
       render={({ site }) => (
         <div>
-          <CssBaseline />
-          <Head metadata={site.siteMetadata} />
-          <Header />
-          {children}
-          <Footer />
+          <ThemeWrapper>
+            <CssBaseline />
+            <Head metadata={site.siteMetadata} />
+            <Header />
+            {children}
+            <Footer />
+          </ThemeWrapper>
         </div>
       )}
     />
