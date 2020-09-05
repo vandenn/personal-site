@@ -18,6 +18,7 @@ const Layout = (props) => {
             siteMetadata {
               title
               description
+              siteUrl
             }
           }
         }

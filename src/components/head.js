@@ -23,6 +23,7 @@ const Head = (props) => {
       <meta property='og:title' content={metadata.title} />
       <meta property='og:description' content={metadata.description} />
       <meta property='og:type' content='website' />
+      <meta property='og:url' content={metadata.siteUrl} />
       <meta property='og:site_name' content={metadata.title} />
       <meta property='og:image' content={ogImage} />
       <meta property='og:image:width' content='1200' />
@@ -33,6 +34,7 @@ const Head = (props) => {
       <meta itemProp='description' content={metadata.description} />
       <meta itemProp='image' content={ogImage} />
       <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:url' content={metadata.siteUrl} />
       <meta name='twitter:title' content={metadata.title} />
       <meta name='twitter:description' content={metadata.description} />
       <meta name='twitter:image' content={ogImage} />

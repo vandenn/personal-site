@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: constants.siteTitle,
     description: constants.siteDescription,
-    siteUrl: 'https://www.evanlivelo.com',
+    siteUrl: constants.siteUrl,
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -14,6 +14,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-material-ui',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
