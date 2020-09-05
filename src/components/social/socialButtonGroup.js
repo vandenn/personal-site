@@ -6,7 +6,6 @@ import socialConstants from 'constants/social';
 
 const SocialButtonGroup = (props) => {
   const renderSocialButtons = () => {
-    console.log(socialConstants);
     return Object.values(socialConstants).map((socialEntry, index) => {
       return (
         <Grid item key={index}>

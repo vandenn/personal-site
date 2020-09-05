@@ -91,7 +91,6 @@ const Header = (props) => {
           }
         `}
         render={(data) => {
-          console.log(data.imageNode);
           return (
             <Link href='/'>
               <div className={classes.imageContainer}>
