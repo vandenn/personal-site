@@ -9,6 +9,9 @@ import SocialButtonGroup from 'components/social/socialButtonGroup';
 import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    textAlign: 'center',
+  },
   contactButton: {
     marginTop: theme.spacing(2),
   },
@@ -24,7 +27,12 @@ const Hero = (props) => {
 
   return (
     <SectionLayout id={navigationConstants.contact.id}>
-      <Grid container direction='column' alignItems='center'>
+      <Grid
+        container
+        direction='column'
+        alignItems='center'
+        className={classes.root}
+      >
         <Grid item>
           <Typography variant='h3'>{frontmatter.title}</Typography>
         </Grid>
