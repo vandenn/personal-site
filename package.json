@@ -22,6 +22,7 @@
     "gatsby-plugin-offline": "^3.2.26",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.6.26",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.27",
@@ -33,7 +34,6 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "2.1.0"
   },
   "repository": {
