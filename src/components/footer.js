@@ -24,7 +24,7 @@ const Footer = (props) => {
         target='_blank'
         rel='noopener'
       >
-        Built by {constants.name}
+        Website built by {constants.name}
       </Typography>
     </Paper>
   );
