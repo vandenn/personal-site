@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Evan Livelo',
+  siteTitle: 'Evan Livelo | NLP, AI, Fullstack',
   siteDescription:
     'Evan Livelo is a software developer and engineer who specializes in deep learning, natural language processing, and fullstack development.',
   siteKeywords:
