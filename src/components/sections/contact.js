@@ -34,7 +34,9 @@ const Hero = (props) => {
         className={classes.root}
       >
         <Grid item>
-          <Typography variant='h3'>{frontmatter.title}</Typography>
+          <Typography variant='h3' color='secondary'>
+            {frontmatter.title}
+          </Typography>
         </Grid>
         <Grid item>
           <Typography>

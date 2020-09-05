@@ -8,7 +8,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  Typography,
 } from '@material-ui/core';
 import { Close as CloseIcon } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
