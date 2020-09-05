@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import {
   AppBar,
   Button,
@@ -17,8 +19,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.default,
   },
-  title: {
+  grow: {
     flexGrow: 1,
+  },
+  imageContainer: {
+    width: '50px',
   },
   navButton: {
     [theme.breakpoints.down('sm')]: {
@@ -39,6 +44,42 @@ const Header = (props) => {
   const handleDrawerOpen = () => setMobileDrawerOpen(true);
   const handleDrawerClose = () => setMobileDrawerOpen(false);
 
+  const renderLogo = () => {
+    return (
+      <StaticQuery
+        query={graphql`
+          {
+            imageNode: allFile(
+              filter: { absolutePath: { regex: "/logo.png/" } }
+            ) {
+              edges {
+                node {
+                  childImageSharp {
+                    fluid(maxWidth: 400, quality: 100) {
+                      ...GatsbyImageSharpFluid_noBase64
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={(data) => {
+          console.log(data.imageNode);
+          return (
+            <Link href='/'>
+              <div className={classes.imageContainer}>
+                <Img
+                  fluid={data.imageNode.edges[0].node.childImageSharp.fluid}
+                />
+              </div>
+            </Link>
+          );
+        }}
+      />
+    );
+  };
+
   const renderNavigationButtons = () => {
     return Object.values(navigationConstants).map((navData, index) => {
       return (
@@ -58,9 +99,8 @@ const Header = (props) => {
     <>
       <AppBar position='static' elevation={0} className={classes.root}>
         <Toolbar>
-          <Typography component={Link} href='/' className={classes.title}>
-            Evan Livelo
-          </Typography>
+          {renderLogo()}
+          <div className={classes.grow} />
           {renderNavigationButtons()}
           <IconButton onClick={handleDrawerOpen} className={classes.menuButton}>
             <MenuIcon />
