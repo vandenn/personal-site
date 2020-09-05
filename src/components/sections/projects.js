@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { Button, Grid, Link, Paper, Typography } from '@material-ui/core';
+import { Grid, Link, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SectionLayout from './sectionLayout';
+import ViewEntryButton from 'components/viewEntryButton';
 import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
@@ -67,18 +68,7 @@ const Projects = (props) => {
           </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
           {renderTech()}
-          <Button
-            component={Link}
-            href={link}
-            target='_blank'
-            rel='noopener'
-            variant='outlined'
-            underline='none'
-            color='primary'
-            size='large'
-          >
-            View
-          </Button>
+          <ViewEntryButton href={link} />
         </Paper>
       </Grid>
     );
