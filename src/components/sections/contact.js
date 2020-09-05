@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Grid, Link, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import ContactButton from 'components/contactButton';
 import SectionLayout from './sectionLayout';
 import SocialButtonGroup from 'components/social/socialButtonGroup';
-import constants from 'constants/common';
 import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,19 +32,7 @@ const Hero = (props) => {
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
         </Grid>
         <Grid item>
-          <Button
-            component={Link}
-            href={`mailto:${constants.email}`}
-            target='_blank'
-            rel='noopener'
-            variant='contained'
-            underline='none'
-            color='primary'
-            size='large'
-            className={classes.contactButton}
-          >
-            {frontmatter.buttonText}
-          </Button>
+          <ContactButton text={frontmatter.buttonText} />
         </Grid>
         <Grid item className={classes.socialButtonsContainer}>
           <SocialButtonGroup />

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Grid, Link, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import ContactButton from 'components/contactButton';
 import SocialButtonGroup from 'components/social/socialButtonGroup';
-import constants from 'constants/common';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   specialties: {
     marginTop: theme.spacing(1),
   },
-  contactButton: {
+  contactButtonContainer: {
     marginTop: theme.spacing(4),
   },
   socialButtonsContainer: {
@@ -72,19 +72,9 @@ const Hero = (props) => {
       </Grid>
       <Grid item>{renderSpecialties()}</Grid>
       <Grid item>
-        <Button
-          component={Link}
-          href={`mailto:${constants.email}`}
-          target='_blank'
-          rel='noopener'
-          variant='contained'
-          underline='none'
-          color='primary'
-          size='large'
-          className={classes.contactButton}
-        >
-          {frontmatter.buttonText}
-        </Button>
+        <div className={classes.contactButtonContainer}>
+          <ContactButton text={frontmatter.buttonText} />
+        </div>
       </Grid>
       <Grid item className={classes.socialButtonsContainer}>
         <SocialButtonGroup />
