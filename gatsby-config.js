@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: constants.siteTitle,
     description: constants.siteDescription,
+    siteUrl: 'https://www.evanlivelo.com',
   },
   plugins: [
     'gatsby-plugin-sharp',
