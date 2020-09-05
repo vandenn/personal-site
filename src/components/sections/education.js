@@ -49,7 +49,7 @@ const Education = (props) => {
               </Link>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant='subtitle2' color='textSecondary'>
+              <Typography variant='subtitle1' color='textSecondary'>
                 {range}
               </Typography>
             </Grid>

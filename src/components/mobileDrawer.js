@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Typography,
 } from '@material-ui/core';
 import { Close as CloseIcon } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,7 +17,7 @@ import navigationConstants from 'constants/navigation';
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
-    width: '300px',
+    width: '250px',
     padding: theme.spacing(1),
   },
 }));
@@ -30,7 +31,13 @@ const MobileDrawer = (props) => {
       return (
         <ListItem key={index}>
           <Link href={`/#${navData.id}`} onClick={onClose}>
-            <ListItemText primary={navData.name} />
+            <ListItemText
+              primary={navData.name}
+              primaryTypographyProps={{
+                variant: 'subtitle2',
+                color: 'primary',
+              }}
+            />
           </Link>
         </ListItem>
       );

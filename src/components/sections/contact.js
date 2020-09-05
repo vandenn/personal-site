@@ -38,6 +38,7 @@ const Hero = (props) => {
             target='_blank'
             rel='noopener'
             variant='contained'
+            underline='none'
             color='primary'
             size='large'
             className={classes.contactButton}

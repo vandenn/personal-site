@@ -16,7 +16,14 @@ const Footer = (props) => {
 
   return (
     <Paper elevation={0} className={classes.root}>
-      <Typography component={Link} href={`${constants.github}`}>
+      <Typography
+        component={Link}
+        href={`${constants.github}`}
+        variant='subtitle2'
+        color='primary'
+        target='_blank'
+        rel='noopener'
+      >
         Built by {constants.name}
       </Typography>
     </Paper>

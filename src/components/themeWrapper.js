@@ -44,6 +44,9 @@ const theme = createMuiTheme({
     h6: {
       fontFamily: FONT_ROBOTO_MONO,
     },
+    subtitle2: {
+      fontFamily: FONT_ROBOTO_MONO,
+    },
     button: {
       fontFamily: FONT_ROBOTO_MONO,
       textTransform: 'none',

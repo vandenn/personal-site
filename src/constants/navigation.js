@@ -21,6 +21,6 @@ module.exports = {
   },
   contact: {
     id: 'contact',
-    name: "Let's talk!",
+    name: 'Contact',
   },
 };

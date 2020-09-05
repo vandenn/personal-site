@@ -27,7 +27,7 @@ const Experience = (props) => {
         <Paper elevation={5} className={classes.experienceEntry}>
           <Typography variant='h6'>{company}</Typography>
           <Typography variant='subtitle1'>{title}</Typography>
-          <Typography variant='subtitle2' color='textSecondary'>
+          <Typography variant='subtitle1' color='textSecondary'>
             {range}
           </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />

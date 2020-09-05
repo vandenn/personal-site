@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import {
   AppBar,
-  Button,
   IconButton,
   Link,
   Toolbar,
@@ -25,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
   imageContainer: {
     width: '50px',
   },
-  navButton: {
+  navLink: {
+    marginLeft: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -80,17 +80,19 @@ const Header = (props) => {
     );
   };
 
-  const renderNavigationButtons = () => {
+  const renderNavigationLinks = () => {
     return Object.values(navigationConstants).map((navData, index) => {
       return (
-        <Button
+        <Typography
           key={index}
+          variant='subtitle2'
           component={Link}
+          color='primary'
           href={`/#${navData.id}`}
-          className={classes.navButton}
+          className={classes.navLink}
         >
           {navData.name}
-        </Button>
+        </Typography>
       );
     });
   };
@@ -101,7 +103,7 @@ const Header = (props) => {
         <Toolbar>
           {renderLogo()}
           <div className={classes.grow} />
-          {renderNavigationButtons()}
+          {renderNavigationLinks()}
           <IconButton onClick={handleDrawerOpen} className={classes.menuButton}>
             <MenuIcon />
           </IconButton>
