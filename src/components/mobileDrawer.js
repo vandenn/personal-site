@@ -20,25 +20,38 @@ const useStyles = makeStyles((theme) => ({
     width: '250px',
     padding: theme.spacing(1),
   },
+  navLink: {
+    cursor: 'pointer',
+  },
 }));
 
 const MobileDrawer = (props) => {
   const classes = useStyles();
   const { open, onClose } = props;
 
+  const createOnNavLinkClick = (sectionId) => (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      `#${sectionId}`
+    );
+    if (anchor) anchor.scrollIntoView({ behavior: 'smooth' });
+    onClose();
+  };
+
   const renderNavigationListItems = () => {
     return Object.values(navigationConstants).map((navData, index) => {
+      const onNavLinkClick = createOnNavLinkClick(navData.id);
       return (
         <ListItem key={index}>
-          <Link href={`/#${navData.id}`} onClick={onClose}>
-            <ListItemText
-              primary={navData.name}
-              primaryTypographyProps={{
-                variant: 'subtitle2',
-                color: 'primary',
-              }}
-            />
-          </Link>
+          <ListItemText
+            primary={navData.name}
+            primaryTypographyProps={{
+              variant: 'subtitle2',
+              color: 'primary',
+              component: Link,
+            }}
+            onClick={onNavLinkClick}
+            className={classes.navLink}
+          />
         </ListItem>
       );
     });
@@ -50,6 +63,9 @@ const MobileDrawer = (props) => {
         open={open}
         onClose={onClose}
         anchor='right'
+        ModalProps={{
+          disableRestoreFocus: true,
+        }}
         classes={{
           paper: classes.drawer,
         }}

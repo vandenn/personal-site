@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navLink: {
     marginLeft: theme.spacing(3),
+    cursor: 'pointer',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -43,6 +44,31 @@ const Header = (props) => {
 
   const handleDrawerOpen = () => setMobileDrawerOpen(true);
   const handleDrawerClose = () => setMobileDrawerOpen(false);
+
+  const createOnNavLinkClick = (sectionId) => (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      `#${sectionId}`
+    );
+    if (anchor) anchor.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const renderNavigationLinks = () => {
+    return Object.values(navigationConstants).map((navData, index) => {
+      const onNavLinkClick = createOnNavLinkClick(navData.id);
+      return (
+        <Typography
+          key={index}
+          variant='subtitle2'
+          component={Link}
+          color='primary'
+          onClick={onNavLinkClick}
+          className={classes.navLink}
+        >
+          {navData.name}
+        </Typography>
+      );
+    });
+  };
 
   const renderLogo = () => {
     return (
@@ -78,23 +104,6 @@ const Header = (props) => {
         }}
       />
     );
-  };
-
-  const renderNavigationLinks = () => {
-    return Object.values(navigationConstants).map((navData, index) => {
-      return (
-        <Typography
-          key={index}
-          variant='subtitle2'
-          component={Link}
-          color='primary'
-          href={`/#${navData.id}`}
-          className={classes.navLink}
-        >
-          {navData.name}
-        </Typography>
-      );
-    });
   };
 
   return (
