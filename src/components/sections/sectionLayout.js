@@ -8,6 +8,11 @@ const useStyles = makeStyles((theme) => ({
     margin: '50px',
     padding: '50px',
     backgroundColor: theme.palette.background.paperSecondary,
+    [theme.breakpoints.down('sm')]: {
+      margin: '10px',
+      marginBottom: '50px',
+      padding: '20px',
+    },
   },
 }));
 
