@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Zoom } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ContactButton from 'components/contactButton';
@@ -61,9 +61,11 @@ const Hero = (props) => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant='h2' color='primary' className={classes.name}>
-          {frontmatter.name}
-        </Typography>
+        <Zoom in={true} timeout={1500}>
+          <Typography variant='h2' color='primary' className={classes.name}>
+            {frontmatter.name}
+          </Typography>
+        </Zoom>
       </Grid>
       <Grid item>
         <Typography variant='h4' color='secondary'>
