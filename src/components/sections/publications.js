@@ -52,7 +52,9 @@ const Publications = (props) => {
               <Typography variant='subtitle1'>{`With: ${coauthors}`}</Typography>
             </Grid>
             <Grid item>
-              <Typography dangerouslySetInnerHTML={{ __html: html }} />
+              <Typography>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+              </Typography>
             </Grid>
             <Grid item>
               <ViewEntryButton href={link} />

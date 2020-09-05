@@ -66,7 +66,9 @@ const Projects = (props) => {
           >
             {title}
           </Typography>
-          <Typography dangerouslySetInnerHTML={{ __html: html }} />
+          <Typography>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </Typography>
           {renderTech()}
           <ViewEntryButton href={link} />
         </Paper>

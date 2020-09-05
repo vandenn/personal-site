@@ -48,7 +48,9 @@ const About = (props) => {
         </Grid>
         <Grid item xs={12} sm={12} md={8}>
           <Paper elevation={5} className={classes.textContainer}>
-            <Typography dangerouslySetInnerHTML={{ __html: html }} />
+            <Typography>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+            </Typography>
           </Paper>
         </Grid>
       </Grid>

@@ -54,7 +54,9 @@ const Education = (props) => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography dangerouslySetInnerHTML={{ __html: html }} />
+              <Typography>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+              </Typography>
             </Grid>
           </Grid>
         </Paper>

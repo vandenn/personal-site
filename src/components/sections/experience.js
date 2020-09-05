@@ -30,7 +30,9 @@ const Experience = (props) => {
           <Typography variant='subtitle1' color='textSecondary'>
             {range}
           </Typography>
-          <Typography dangerouslySetInnerHTML={{ __html: html }} />
+          <Typography>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </Typography>
         </Paper>
       </Grid>
     );
