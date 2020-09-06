@@ -8,7 +8,8 @@ import SocialButtonGroup from 'components/social/socialButtonGroup';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '50px',
+    paddingTop: '50px',
+    paddingBottom: '50px',
     textAlign: 'center',
   },
   name: {
