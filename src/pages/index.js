@@ -7,7 +7,6 @@ import Contact from 'components/sections/contact';
 import Education from 'components/sections/education';
 import Experience from 'components/sections/experience';
 import Hero from 'components/sections/hero';
-import Projects from 'components/sections/projects';
 import Publications from 'components/sections/publications';
 
 const Home = (props) => {
@@ -19,7 +18,6 @@ const Home = (props) => {
       <Experience data={data.experience.edges} />
       <Education data={data.education.edges} />
       <Publications data={data.publications.edges} />
-      <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
     </Layout>
   );
@@ -111,28 +109,6 @@ export const query = graphql`
             coauthors
             publisher
             link
-          }
-        }
-      }
-    }
-    projects: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            tech
-            link
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 100) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
           }
         }
       }
