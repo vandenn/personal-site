@@ -1,7 +1,7 @@
 ---
 date: '2020-12'
 company: 'Thinking Machines'
-title: 'Machine Learning Researcher'
+title: 'Machine Learning Consultant'
 range: 'December 2020 - Present'
 ---
 

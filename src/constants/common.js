@@ -1,9 +1,9 @@
 module.exports = {
-  siteTitle: 'Evan Livelo | NLP, AI, Fullstack',
+  siteTitle: 'Evan Livelo | ML, Data, Engineering',
   siteDescription:
-    'Evan Livelo is a software developer and engineer who specializes in deep learning, natural language processing, and fullstack development.',
+    'Evan Livelo is a machine learning consultant and data engineer who specializes in deep learning, data engineering, and fullstack development.',
   siteKeywords:
-    'Evan Livelo, Evan, Livelo, vandenn, software developer, deep learning, natural language processing, nlp, artificial intelligence, dlsu, de la salle university, computer science',
+    'Evan Livelo, Evan, Livelo, vandenn, data engineering, deep learning, natural language processing, software developer, nlp, artificial intelligence, dlsu, de la salle university, computer science, thinking machines',
   siteUrl: 'https://evanlivelo.com/',
   siteLanguage: 'en_US',
   name: 'Evan Livelo',
