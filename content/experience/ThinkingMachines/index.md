@@ -5,8 +5,8 @@ title: 'Machine Learning Researcher'
 range: 'December 2020 - Present'
 ---
 
-I work with different teams and projects to:
+I work across multiple functions for AI/data projects spanning machine learning, data and cloud engineering, software architecture, technical leadership, people management, and business development in Southeast Asia and beyond.
 
-- Develop computer vision and deep learning models that support the document processing infrastructure to enable more accurate automatic text recognition
-- Perform exploration and analysis of data from various industries to better understand client needs and pain points
-- Implement end-to-end systems that consolidate data from a plethora of data sources to create smarter aggregations of information
+- As a lead, I am responsible for managing data/ML engineers and consultants, spearheading initiatives to build AI/ML tools (computer vision, document processing), driving process improvements, and providing technical guidance to my team and the teams we work with.
+- I develop end-to-end data solutions, design microservice architecture, experiment with deep learning models, and implement machine learning algorithms for key clients to help them leverage their data and gain valuable insights for their organization's operations.
+- I scope multiple AI/ML project opportunities and POCs with clients in various fields including logistics and financial services.
