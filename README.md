@@ -19,12 +19,12 @@ My personal site implemented with Gatsby.js + Material-UI.
 
 ## Setup
 
-1. Install Node.js and NPM via NVM or the Node installer.
+1. Install Node.js and NPM via NVM or the Node installer. (Recommend using `lts/dubnium (v10.24.1)`)
 
-2. Install the Gatsby CLI.
+2. Install Gatsby CLI v2.
 
 ```
-npm install -g gatsby-cli
+npm install -g gatsby-cli@2
 ```
 
 3. `cd` into your local copy of this repository and install the node modules.
