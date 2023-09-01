@@ -8,6 +8,6 @@ module.exports = {
   siteLanguage: 'en_US',
   name: 'Evan Livelo',
   email: 'evan.livelo@gmail.com',
-  github: 'https://github.com/Vandenn',
+  github: 'https://github.com/vandenn',
   linkedin: 'https://www.linkedin.com/in/evanlivelo/',
 };

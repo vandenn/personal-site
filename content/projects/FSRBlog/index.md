@@ -6,7 +6,7 @@ tech:
   - Redux.js
   - Express
   - PostgreSQL
-link: 'https://github.com/Vandenn/fullstack-react-blog'
+link: 'https://github.com/vandenn/fullstack-react-blog'
 image: './react.png'
 ---
 

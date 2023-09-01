@@ -14,7 +14,7 @@ My personal site implemented with Gatsby.js + Material-UI.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Vandenn/personal-site/master/src/images/og.png" alt="Preview" />
+  <img src="https://raw.githubusercontent.com/vandenn/personal-site/master/src/images/og.png" alt="Preview" />
 </p>
 
 ## Setup

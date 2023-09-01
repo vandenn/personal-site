@@ -9,6 +9,6 @@ module.exports = {
   },
   github: {
     name: 'Github',
-    url: 'https://github.com/Vandenn',
+    url: 'https://github.com/vandenn',
   },
 };
