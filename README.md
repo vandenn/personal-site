@@ -20,25 +20,25 @@ My personal site implemented with Gatsby.js + Material-UI.
 ## Setup
 
 1. Install Node.js and NPM via NVM or the Node installer. (Recommend using `lts/dubnium (v10.24.1)`)
-
-2. Install Gatsby CLI v2.
-
-```
-npm install -g gatsby-cli@2
-```
-
-3. `cd` into your local copy of this repository and install the node modules.
-
-```
-cd personal-site
-npm install
-```
-
-4. Run the site in develop mode.
-
-```
-gatsby develop
-```
+    ```bash
+    nvm list
+    nvm install lts/dubnium
+    # Activate dubnium for the rest of the commands
+    nvm use lts/dubnium
+    ```
+1. Install Gatsby CLI v2.
+    ```bash
+    npm install -g gatsby-cli@2
+    ```
+1. `cd` into your local copy of this repository and install the node modules.
+    ```bash
+    cd personal-site
+    npm install
+    ```
+1. Run the site in develop mode.
+    ```bash
+    gatsby develop
+    ```
 
 ## Resources
-* Code organization, website layout, and stack heavily inspired by Brittany Chiang's personal site: https://github.com/bchiang7/v4
+* Code organization, website layout, and stack heavily inspired by Brittany Chiang's [personal site](https://brittanychiang.com/) -- repository here: https://github.com/bchiang7/v4 
