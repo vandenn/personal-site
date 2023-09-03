@@ -40,9 +40,5 @@ npm install
 gatsby develop
 ```
 
-## Commit Format
-
-This project follows a modified Conventional Commits format for its commit messages (https://www.conventionalcommits.org/).
-
 ## Resources
 * Code organization, website layout, and stack heavily inspired by Brittany Chiang's personal site: https://github.com/bchiang7/v4
